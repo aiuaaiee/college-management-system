@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeLeaf.org">
 
 <head>
     <meta charset="ISO-8859-1">
@@ -26,8 +26,11 @@
             </thead>
 
             <tbody>
-                <tr>
-                    
+                <tr th:each="student:${students}">
+                    <td th:text="${student.firstName}"></td>
+                    <td th:text="${student.lastName}"></td>
+                    <td th:text="${student.email}"></td>
+                    <td th:text="${student.age}"></td>
                 </tr>
             </tbody>
 
